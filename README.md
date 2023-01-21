@@ -9,9 +9,7 @@
 
 ## 示例
 
-- 获取`url`、`payload`
-
-```node "geetestV4-sense.js"```
+- 获取`url`、`payload`:`node "geetestV4-sense.js"`
 ![](./images/exp_1.png)`
 
 - 请求方法: `post`
