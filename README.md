@@ -12,9 +12,23 @@
 - 获取`url`、`payload`:`node "geetestV4-sense.js"`
 ![](./images/exp_1.png)`
 
-- 请求方法: `post`
+- 发起请求(测试接口:`https://dkapi.geetest.com/deepknow/v2/judge?pt=1&app_id=`)
 
-- 请求成功：`{"gen_time":xxx,"message":"ok","session_id":"xxx","status":1,"ttl":1800}`
+```
+//node-fetch
+fetch(url + app_id, {
+  "headers": {
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+  },
+  "body": payload,
+  "method": "POST"
+}).then(function (response) {
+  return response.json();
+}).then(data => {
+  console.log(data);
+});
+```
+- 成功返回：`{"gen_time":xxx,"message":"ok","session_id":"xxx","status":1,"ttl":1800}`
 
 ## 声明
 
